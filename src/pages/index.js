@@ -1,8 +1,15 @@
-import { Assets } from "assets";
 import Head from "next/head";
 import { Navbar } from "../components";
 import Image from "next/image";
-import { IconDownload, LineArt, ProfileHome } from "assets/icon/home";
+import {
+	IconClock,
+	IconDownload,
+	IconFigma,
+	IconProjectWeb,
+	LineArt,
+	ProfileHome,
+	ProfileHome2,
+} from "assets/icon/home";
 
 export default function Home() {
 	return (
@@ -13,15 +20,15 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
-			<div className="bg-main-dark overflow-hidden">
-				<div className="h-screen w-full bg-gradient-to-b from-[#171045] to-main-dark">
-					<div className=" w-72 h-72 sm:w-96 sm:h-96 absolute -bottom-20 lg:-bottom-32 -left-40">
+			<div className="overflow-hidden bg-main-dark">
+				<div className="h-screen relative w-full bg-gradient-to-b from-[#171045] to-transparent">
+					<div className="absolute w-72 h-72 sm:w-96 sm:h-96 -bottom-20 lg:-bottom-32 -left-40 z-[1]">
 						<Image layout="fill" src={LineArt} alt="line sindev" />
 					</div>
-					<div className="max-w-6xl px-4 xl:px-0 mx-auto flex flex-col space-y-4 lg:space-y-0 lg:flex-row justify-center lg:justify-between items-center h-full">
-						<div className="flex flex-col space-y-3 sm:space-y-5 lg:h-full justify-center w-full lg:w-7/12">
+					<div className="flex flex-col items-center justify-center h-full max-w-6xl px-4 mx-auto space-y-4 xl:px-0 lg:space-y-0 lg:flex-row lg:justify-between">
+						<div className="flex flex-col justify-center w-full space-y-3 sm:space-y-5 lg:h-full lg:w-7/12">
 							<div className="flex flex-col">
-								<h1 className=" text-white-1 text-base lg:text-xl">
+								<h1 className="text-base text-white-1 lg:text-xl">
 									Hallo, I am Singgih
 								</h1>
 								<p className="text-3xl md:text-6xl text-transparent font-bold bg-clip-text bg-gradient-to-l from-[#aa3ff1] to-[#4628F1] animate-text">
@@ -36,11 +43,11 @@ export default function Home() {
 							</p>
 							<div className="flex flex-row space-x-5">
 								<a href="https://id.linkedin.com/in/singgih-budi-purnadi-620751195?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F">
-									<div className=" px-5 sm:w-48 bg-brand text-white-1 text-sm sm:text-base rounded-xl text-center py-2">
+									<div className="px-5 py-2 text-sm text-center sm:w-48 hover:bg-brand/30 bg-brand text-white-1 sm:text-base rounded-xl">
 										Hire Me!
 									</div>
 								</a>
-								<button className="px-5 sm:w-48 rounded-xl py-2 border border-brand flex justify-center space-x-3">
+								<button className="flex justify-center px-5 py-2 space-x-3 border sm:w-48 rounded-xl border-brand hover:bg-brand/30">
 									<span className="text-sm sm:text-base text-white-1">
 										Download CV
 									</span>
@@ -59,7 +66,102 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className="h-screen w-full bg-main-dark"></div>
+				<div className="relative w-full bg-main-dark">
+					<div className="absolute rotate-180 w-72 h-72 sm:w-96 sm:h-96 -bottom-4 lg:-top-32 -right-40">
+						<Image layout="fill" src={LineArt} alt="line sindev" />
+					</div>
+					<div className="flex flex-col items-center justify-center max-w-6xl px-4 py-10 mx-auto space-y-4 sm:py-24 lg:space-y-0 lg:justify-between lg:flex-row-reverse xl:px-0">
+						<div className="flex flex-col justify-center w-full space-y-8 sm:space-y-12 lg:h-full lg:w-6/12">
+							<div className="flex flex-col space-y-1 sm:space-y-2">
+								<h2 className="text-2xl font-bold md:text-4xl text-brand">
+									About Me
+								</h2>
+								<p className="text-sm lg:text-base text-white-1">
+									I’m a top online marketer and branding expert, I started my
+									career by lauching the popular metaverse design, in just a few
+									short years, I built the brand to millions of social media
+									followers and websites visitors. I also created award-winning
+									online products with millions of dolloars in online sales you
+									want, you never get personalized experiences and they can be
+									upwards of $1000 on hour.
+								</p>
+							</div>
+							<div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
+								<div className="flex flex-row items-center space-x-3">
+									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-brand-100">
+										<div className="relative w-6 h-6 sm:w-8 sm:h-8">
+											<Image layout="fill" src={IconClock} alt="clock sindev" />
+										</div>
+									</div>
+									<div className="flex flex-col">
+										<span className="text-base font-bold sm:text-lg text-brand">
+											2 Years+
+										</span>
+										<span className="text-sm sm:text-base text-white-1">
+											Experiences
+										</span>
+									</div>
+								</div>
+								<div className="flex flex-row items-center space-x-3">
+									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-brand-100">
+										<div className="relative w-6 h-6 sm:w-8 sm:h-8">
+											<Image
+												layout="fill"
+												src={IconProjectWeb}
+												alt="clock sindev"
+											/>
+										</div>
+									</div>
+									<div className="flex flex-col">
+										<span className="text-base font-bold sm:text-lg text-brand">
+											10 Projects+
+										</span>
+										<span className="text-sm sm:text-base text-white-1">
+											Front End Dev
+										</span>
+									</div>
+								</div>
+								<div className="flex flex-row items-center space-x-3">
+									<div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-brand-100">
+										<div className="relative w-6 h-6 sm:w-8 sm:h-8">
+											<Image layout="fill" src={IconFigma} alt="clock sindev" />
+										</div>
+									</div>
+									<div className="flex flex-col">
+										<span className="text-base font-bold sm:text-lg text-brand">
+											5 Projects+
+										</span>
+										<span className="text-sm sm:text-base text-white-1">
+											UI/UX
+										</span>
+									</div>
+								</div>
+							</div>
+							<div className="flex flex-row space-x-5">
+								<a href="https://id.linkedin.com/in/singgih-budi-purnadi-620751195?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F">
+									<div className="px-5 py-2 text-sm text-center sm:w-48 hover:bg-brand/30 bg-brand text-white-1 sm:text-base rounded-xl">
+										Hire Me!
+									</div>
+								</a>
+								<button className="flex justify-center px-5 py-2 space-x-3 border sm:w-48 rounded-xl border-brand hover:bg-brand/30">
+									<span className="text-sm sm:text-base text-white-1">
+										Download CV
+									</span>
+									<div className="relative w-5 h-5">
+										<Image
+											layout="fill"
+											src={IconDownload}
+											alt="icon download sindev"
+										/>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div className="w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] relative">
+							<Image layout="fill" src={ProfileHome2} alt="profile sindev" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

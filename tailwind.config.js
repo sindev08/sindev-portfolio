@@ -7,6 +7,7 @@ module.exports = {
 			},
 			colors: {
 				brand: "#4628F1",
+				"brand-100": "#DAD4FC",
 				"brand-theMalaka": "#00BAC7",
 				"main-dark": "#070514",
 				"white-1": "#DFDBF6",

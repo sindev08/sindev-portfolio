@@ -1,0 +1,27 @@
+<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_838_1428)">
+<circle cx="16.8735" cy="15.9236" r="15" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.8735 4.25696V5.09029" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.8735 26.757V27.5903" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.707 5.82007L22.2904 6.54176" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.457 25.3056L11.0404 26.0273" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.54 15.9236L27.7067 15.9236" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.04004 15.9236L5.20671 15.9236" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.9775 10.0903L26.2559 10.507" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.49219 21.3403L6.7705 21.757" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.9775 21.757L26.2559 21.3403" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.49219 10.507L6.7705 10.0903" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.457 6.54175L11.0404 5.82006" stroke="#4628F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.759 26.132L16.8735 15.9236" stroke="url(#paint0_linear_838_1428)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.8737 16.6736C17.2879 16.6736 17.6237 16.3379 17.6237 15.9236C17.6237 15.5094 17.2879 15.1736 16.8737 15.1736V16.6736ZM10.207 15.1736C9.79282 15.1736 9.45703 15.5094 9.45703 15.9236C9.45703 16.3379 9.79282 16.6736 10.207 16.6736V15.1736ZM16.8737 15.1736H10.207V16.6736H16.8737V15.1736Z" fill="#4628F1"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_838_1428" x1="21.0402" y1="23.4236" x2="15.8677" y2="22.7439" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4628F1"/>
+<stop offset="1" stop-color="#4628F1" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_838_1428">
+<rect width="32" height="32" fill="white" transform="translate(0.873535)"/>
+</clipPath>
+</defs>
+</svg>
