@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Navbar } from "../components";
 import Image from "next/image";
 import {
+	ExampleProject,
 	IconClock,
 	IconDownload,
 	IconFigma,
@@ -10,8 +11,10 @@ import {
 	ProfileHome,
 	ProfileHome2,
 } from "assets/icon/home";
+import { useState } from "react";
 
 export default function Home() {
+	const [tabProjects, setTabProjects] = useState("tab1");
 	return (
 		<div className="">
 			<Head>
@@ -159,6 +162,147 @@ export default function Home() {
 						</div>
 						<div className="w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] relative">
 							<Image layout="fill" src={ProfileHome2} alt="profile sindev" />
+						</div>
+					</div>
+				</div>
+				<div className="max-w-6xl px-4 pb-32 mx-auto xl:px-0">
+					<div className="flex flex-col items-center justify-center">
+						<h2 className="text-base text-brand">Projects</h2>
+						<div className="flex flex-row justify-center mt-2 space-x-1">
+							<button
+								onClick={() => setTabProjects("tab1")}
+								className={` ${
+									tabProjects === "tab1"
+										? "text-white-1 font-bold text-base sm:text-xl bg-brand/10 rounded-t-xl"
+										: "text-brand text-sm sm:text-base font-medium"
+								} px-3 py-2 transition-all`}
+							>
+								Web Developer
+							</button>
+							<button
+								onClick={() => setTabProjects("tab2")}
+								className={` ${
+									tabProjects === "tab2"
+										? "text-white-1 font-bold text-base sm:text-xl bg-brand/10 rounded-t-xl"
+										: "text-brand text-sm sm:text-base font-medium"
+								} px-3 py-2 transition-all`}
+							>
+								Web Design
+							</button>
+						</div>
+						<div className="w-full px-4 sm:px-12 lg:px-24 py-10 bg-brand/10 rounded-[36px] overflow-hidden">
+							{tabProjects === "tab1" ? (
+								<div className="flex justify-center">
+									<div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+										<div className="flex flex-col space-y-5 w-72">
+											<div className="relative w-full overflow-hidden h-52 rounded-3xl">
+												<Image
+													layout="fill"
+													src={ExampleProject}
+													alt="project litedex"
+												/>
+											</div>
+											<div className="flex flex-col p-1 space-y-3">
+												<span className="text-lg font-bold text-brand">
+													Litedex Protocol
+												</span>
+												<span className="text-base text-white-1">
+													Pengalaman bekerja pada bagian Front End Developer,
+													UI/UX Designer dan Technical Writer.
+												</span>
+												<a href="" className="text-right">
+													<span className="text-sm font-bold underline text-brand">
+														Go to Projects
+													</span>
+												</a>
+											</div>
+										</div>
+										<div className="flex flex-col space-y-5 w-72">
+											<div className="relative w-full overflow-hidden bg-black h-52 rounded-3xl">
+												<Image
+													layout="fill"
+													src={ExampleProject}
+													alt="project litedex"
+												/>
+											</div>
+											<div className="flex flex-col p-1 space-y-3">
+												<span className="text-lg font-bold text-brand">
+													Litedex Protocol
+												</span>
+												<span className="text-base text-white-1">
+													Pengalaman bekerja pada bagian Front End Developer,
+													UI/UX Designer dan Technical Writer.
+												</span>
+												<a href="" className="text-right">
+													<span className="text-sm font-bold underline text-brand">
+														Go to Projects
+													</span>
+												</a>
+											</div>
+										</div>
+										<div className="flex flex-col space-y-5 w-72">
+											<div className="relative w-full overflow-hidden bg-black h-52 rounded-3xl">
+												<Image
+													layout="fill"
+													src={ExampleProject}
+													alt="project litedex"
+												/>
+											</div>
+											<div className="flex flex-col p-1 space-y-3">
+												<span className="text-lg font-bold text-brand">
+													Litedex Protocol
+												</span>
+												<span className="text-base text-white-1">
+													Pengalaman bekerja pada bagian Front End Developer,
+													UI/UX Designer dan Technical Writer.
+												</span>
+												<a href="" className="text-right">
+													<span className="text-sm font-bold underline text-brand">
+														Go to Projects
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							) : tabProjects === "tab2" ? (
+								<div className="flex flex-col space-y-40">
+									<div className="flex flex-col items-center justify-between space-y-5 sm:space-y-0 sm:flex-row">
+										<div className="relative overflow-hidden shadow-2xl h-[13.125rem] w-[17.5rem] sm:h-[22.5rem] sm:w-[30rem] rounded-3xl">
+											<Image
+												layout="fill"
+												src={ExampleProject}
+												alt="project sindev"
+											/>
+										</div>
+										<div className="flex flex-col space-y-3 sm:space-y-5 sm:w-[45%]">
+											<h2 className="text-xl font-bold sm:text-2xl text-brand">
+												Bakery Landing Page Design
+											</h2>
+											<p className="text-sm sm:text-base text-white-1">
+												When an unknown printer took a galley of type and
+												scrambled it to make a type specimen book. It has
+												survived not only five centuries, but also the leap into
+												electronic typesetting, remaining essentially unchanged.
+											</p>
+											<div className="flex flex-col">
+												<span className="text-xs sm:text-sm text-white-1">
+													1 Page
+												</span>
+												<span className="text-xs sm:text-sm text-white-1">
+													100+ Words
+												</span>
+												<span className="text-xs sm:text-sm text-white-1">
+													Design System
+												</span>
+												<span className="text-xs sm:text-sm text-white-1">
+													Responsive
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							) : null}
 						</div>
 					</div>
 				</div>
