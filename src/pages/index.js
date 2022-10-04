@@ -11,10 +11,84 @@ import {
 	ProfileHome,
 	ProfileHome2,
 } from "assets/icon/home";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+	AboutSvg,
+	ContactSvg,
+	HomeSvg,
+	ProjectSvg,
+} from "assets/icon/home/compSvg";
+import { BottomSheet } from "react-spring-bottom-sheet";
+import "react-spring-bottom-sheet/dist/style.css";
 
 export default function Home() {
 	const [tabProjects, setTabProjects] = useState("tab1");
+
+	const clickHero = useRef(null);
+	const clickAbout = useRef(null);
+	const clickProject = useRef(null);
+	// const clickContact = useRef(null);
+
+	const MenuMobile = ({ clickRef, name, children, clickScroll }) => {
+		const handleClick = () => {
+			clickRef.current?.scrollIntoView({ behavior: "smooth" });
+		};
+		const [open, setOpen] = useState(false);
+
+		// Ensure it animates in when loaded
+		// useEffect(() => {
+		// 	setOpen(true);
+		// }, []);
+
+		// function onDismiss() {
+		// 	setOpen(false);
+		// }
+
+		return clickScroll ? (
+			<button
+				onClick={handleClick}
+				className="flex flex-col items-center justify-center"
+			>
+				{children}
+				<span className="text-xs font-medium text-white-1">{name}</span>
+			</button>
+		) : (
+			<>
+				<button onClick={() => setOpen(true)}>
+					<div className="flex flex-col items-center justify-center">
+						{children}
+						<span className="text-xs font-medium text-white-1">{name}</span>
+					</div>
+				</button>
+				<BottomSheet
+					open={open}
+					onDismiss={() => setOpen(false)}
+					// blocking={false}
+					snapPoints={({ minHeight }) => minHeight}
+				>
+					<div className="flex flex-col px-4 py-8 space-y-5">
+						<div className="flex flex-row justify-between">
+							<div className="w-8 h-8 bg-white"></div>
+							<div className="w-full ml-4 bg-white h-7"></div>
+						</div>
+						<div className="flex flex-row justify-between">
+							<div className="w-8 h-8 bg-white"></div>
+							<div className="w-full ml-4 bg-white h-7"></div>
+						</div>
+						<div className="flex flex-row justify-between">
+							<div className="w-8 h-8 bg-white"></div>
+							<div className="w-full ml-4 bg-white h-7"></div>
+						</div>
+					</div>
+				</BottomSheet>
+			</>
+			// <button className="flex flex-col items-center justify-center">
+			// 	{children}
+			// 	<span className="text-xs font-medium text-white-1">{name}</span>
+			// </button>
+		);
+	};
+
 	return (
 		<div className="">
 			<Head>
@@ -23,8 +97,28 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
+			<div className="fixed bottom-0 z-[1] w-full px-6 py-2 border-t bg-main-dark/10 backdrop-blur-sm lg:hidden border-brand/30">
+				<div className="flex flex-row flex-wrap justify-between">
+					<MenuMobile name="Home" clickRef={clickHero} clickScroll>
+						<HomeSvg className="w-6 h-6 fill-brand/60 stroke-brand" />
+					</MenuMobile>
+					<MenuMobile name="About" clickScroll clickRef={clickAbout}>
+						<AboutSvg className="w-6 h-6 fill-brand/60 stroke-brand" />
+					</MenuMobile>
+					<MenuMobile name="Projects" clickScroll clickRef={clickProject}>
+						<ProjectSvg className="w-6 h-6 fill-brand/60 stroke-brand" />
+					</MenuMobile>
+					<MenuMobile>
+						<ContactSvg className="w-6 h-6 fill-brand/60 stroke-brand" />
+						<span className="text-xs font-medium text-white-1">Contact</span>
+					</MenuMobile>
+				</div>
+			</div>
 			<div className="overflow-hidden bg-main-dark">
-				<div className="h-screen relative w-full bg-gradient-to-b from-[#171045] to-transparent">
+				<div
+					ref={clickHero}
+					className="h-screen relative w-full bg-gradient-to-b from-[#171045] to-transparent"
+				>
 					<div className="absolute w-72 h-72 sm:w-96 sm:h-96 -bottom-20 lg:-bottom-32 -left-40 z-[1]">
 						<Image layout="fill" src={LineArt} alt="line sindev" />
 					</div>
@@ -69,7 +163,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full bg-main-dark">
+				<div ref={clickAbout} className="relative w-full bg-main-dark">
 					<div className="absolute rotate-180 w-72 h-72 sm:w-96 sm:h-96 -bottom-4 lg:-top-32 -right-40">
 						<Image layout="fill" src={LineArt} alt="line sindev" />
 					</div>
@@ -165,7 +259,10 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className="max-w-6xl px-4 pb-32 mx-auto xl:px-0">
+				<div
+					ref={clickProject}
+					className="max-w-6xl px-4 pb-32 mx-auto xl:px-0"
+				>
 					<div className="flex flex-col items-center justify-center">
 						<h2 className="text-base text-brand">Projects</h2>
 						<div className="flex flex-row justify-center mt-2 space-x-1">
@@ -265,44 +362,47 @@ export default function Home() {
 										</div>
 									</div>
 								</div>
-							) : tabProjects === "tab2" ? (
-								<div className="flex flex-col space-y-40">
-									<div className="flex flex-col items-center justify-between space-y-5 sm:space-y-0 sm:flex-row">
-										<div className="relative overflow-hidden shadow-2xl h-[13.125rem] w-[17.5rem] sm:h-[22.5rem] sm:w-[30rem] rounded-3xl">
-											<Image
-												layout="fill"
-												src={ExampleProject}
-												alt="project sindev"
-											/>
-										</div>
-										<div className="flex flex-col space-y-3 sm:space-y-5 sm:w-[45%]">
-											<h2 className="text-xl font-bold sm:text-2xl text-brand">
-												Bakery Landing Page Design
-											</h2>
-											<p className="text-sm sm:text-base text-white-1">
-												When an unknown printer took a galley of type and
-												scrambled it to make a type specimen book. It has
-												survived not only five centuries, but also the leap into
-												electronic typesetting, remaining essentially unchanged.
-											</p>
-											<div className="flex flex-col">
-												<span className="text-xs sm:text-sm text-white-1">
-													1 Page
-												</span>
-												<span className="text-xs sm:text-sm text-white-1">
-													100+ Words
-												</span>
-												<span className="text-xs sm:text-sm text-white-1">
-													Design System
-												</span>
-												<span className="text-xs sm:text-sm text-white-1">
-													Responsive
-												</span>
+							) : (
+								tabProjects === "tab2" && (
+									<div className="flex flex-col space-y-40">
+										<div className="flex flex-col items-center justify-between space-y-5 lg:space-y-0 lg:flex-row">
+											<div className="relative overflow-hidden shadow-2xl h-[13.125rem] w-[17.5rem] sm:h-[22.5rem] sm:w-[30rem] rounded-3xl">
+												<Image
+													layout="fill"
+													src={ExampleProject}
+													alt="project sindev"
+												/>
+											</div>
+											<div className="flex flex-col space-y-3 lg:space-y-5 lg:w-[45%]">
+												<h2 className="text-xl font-bold sm:text-2xl text-brand">
+													Bakery Landing Page Design
+												</h2>
+												<p className="text-sm sm:text-base text-white-1">
+													When an unknown printer took a galley of type and
+													scrambled it to make a type specimen book. It has
+													survived not only five centuries, but also the leap
+													into electronic typesetting, remaining essentially
+													unchanged.
+												</p>
+												<div className="flex flex-col">
+													<span className="text-xs sm:text-sm text-white-1">
+														1 Page
+													</span>
+													<span className="text-xs sm:text-sm text-white-1">
+														100+ Words
+													</span>
+													<span className="text-xs sm:text-sm text-white-1">
+														Design System
+													</span>
+													<span className="text-xs sm:text-sm text-white-1">
+														Responsive
+													</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							) : null}
+								)
+							)}
 						</div>
 					</div>
 				</div>
