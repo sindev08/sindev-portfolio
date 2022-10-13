@@ -2,6 +2,7 @@ import React from "react";
 import { Logo } from "../../../assets";
 import Image from "next/image";
 import Link from "next/link";
+import Scrollspy from "react-scrollspy";
 
 export const Navbar = () => {
 	return (
@@ -13,7 +14,34 @@ export const Navbar = () => {
 					</div>
 				</a>
 				{/* <!-- Nav Links --> */}
-				<ul className="hidden px-4 space-x-16 text-white lg:flex">
+				<Scrollspy
+					className="hidden px-4 space-x-16 text-white lg:flex"
+					items={["hero", "about", "project", "contact"]}
+					scrolledPastClassName="140px"
+					currentClassName="is-current"
+				>
+					<li>
+						<Link href="#hero">
+							<a className="relative text-sm hover:text-gray-200">Home</a>
+						</Link>
+					</li>
+					<li>
+						<Link href="#about">
+							<a className="relative text-sm hover:text-gray-200">About</a>
+						</Link>
+					</li>
+					<li>
+						<Link href="#project">
+							<a className="relative text-sm hover:text-gray-200">Projects</a>
+						</Link>
+					</li>
+					<li>
+						<Link href="#contact">
+							<a className="relative text-sm hover:text-gray-200">Contact</a>
+						</Link>
+					</li>
+				</Scrollspy>
+				{/* <ul className="hidden px-4 space-x-16 text-white lg:flex">
 					<li>
 						<Link className="text-base hover:text-gray-200" href="/">
 							Home
@@ -24,11 +52,11 @@ export const Navbar = () => {
 							About
 						</Link>
 					</li>
-					{/* <li>
+					<li>
 						<Link className="text-base hover:text-gray-200" href="/slicing/the-malaka">
 							Slicing
 						</Link>
-					</li> */}
+					</li>
 					<li>
 						<Link className="text-base hover:text-gray-200" href="/project">
 							Projects
@@ -39,7 +67,7 @@ export const Navbar = () => {
 							Contact
 						</Link>
 					</li>
-				</ul>
+				</ul> */}
 				<div className="mo-fire lg:hidden">
 					<svg
 						version="1.1"
