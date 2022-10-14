@@ -31,6 +31,19 @@ ul > li > a::after {
 	bottom: -0.25rem;
 }
 
+ul > li.is-current > a > .navmob {
+	fill: #4628f1;
+}
+
+ul > li.is-current > a > span {
+	color: #4628f1 !important;
+}
+
+.navmob {
+	fill: #171045;
+	transition: 0.5s;
+}
+
 /* Custom React spring bottom sheet */
 :root {
 	--rsbs-handle-bg: #4b4b4b;
