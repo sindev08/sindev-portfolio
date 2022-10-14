@@ -15,15 +15,8 @@ import {
 	ProfileHome,
 	ProfileHome2,
 } from "assets/icon/home";
-import { useRef, useState } from "react";
-import {
-	AboutSvg,
-	ContactSvg,
-	HomeSvg,
-	LinkSvg,
-	ProjectSvg,
-} from "assets/icon/home/compSvg";
-import { BottomSheet } from "react-spring-bottom-sheet";
+import { useState } from "react";
+import { LinkSvg } from "assets/icon/home/compSvg";
 import "react-spring-bottom-sheet/dist/style.css";
 import Link from "next/link";
 import { Ahref } from "config";
@@ -82,7 +75,7 @@ export default function Home() {
 					<div className="absolute w-72 h-72 sm:w-96 sm:h-96 -bottom-20 lg:-bottom-32 -left-40 z-[1]">
 						<Image layout="fill" src={LineArt} alt="line sindev" />
 					</div>
-					<div className="flex flex-col items-center justify-center h-full max-w-6xl px-4 mx-auto space-y-4 xl:px-0 lg:space-y-0 lg:flex-row lg:justify-between">
+					<div className="flex flex-col items-center justify-center h-full max-w-6xl px-4 mx-auto space-y-12 sm:space-y-24 xl:px-0 lg:space-y-0 lg:flex-row lg:justify-between">
 						<div className="flex flex-col justify-center w-full space-y-3 sm:space-y-5 lg:h-full lg:w-7/12">
 							<div className="flex flex-col">
 								<h1 className="text-base text-white-1 lg:text-xl">
@@ -125,12 +118,12 @@ export default function Home() {
 				</div>
 				<section
 					id="about"
-					className="relative justify-between w-full sm:h-screen bg-main-dark"
+					className="relative justify-between w-full lg:h-screen bg-main-dark"
 				>
 					<div className="absolute rotate-180 w-72 h-72 sm:w-96 sm:h-96 -bottom-4 lg:-top-32 -right-40">
 						<Image layout="fill" src={LineArt} alt="line sindev" />
 					</div>
-					<div className="flex flex-col items-center justify-center max-w-6xl px-4 py-20 mx-auto space-y-4 sm:py-24 lg:space-y-0 lg:justify-between lg:flex-row-reverse xl:px-0">
+					<div className="flex flex-col items-center justify-center max-w-6xl px-4 py-20 mx-auto space-y-12 sm:space-y-24 sm:py-24 lg:space-y-0 lg:justify-between lg:flex-row-reverse xl:px-0">
 						<div className="flex flex-col justify-center w-full space-y-8 sm:space-y-12 lg:h-full lg:w-6/12">
 							<div className="flex flex-col space-y-1 sm:space-y-2">
 								<h2 className="text-2xl font-bold md:text-4xl text-brand">
@@ -224,7 +217,7 @@ export default function Home() {
 				</section>
 				<section
 					id="project"
-					className="max-w-6xl px-4 pt-20 pb-40 mx-auto space-y-2 sm:py-20 sm:h-screen xl:px-0 sm:space-y-8"
+					className="max-w-6xl px-4 pt-20 pb-40 mx-auto space-y-2 lg:py-20 lg:h-screen xl:px-0 sm:space-y-8"
 				>
 					<h2 className="text-2xl font-bold text-center md:text-4xl text-brand">
 						Projects
@@ -403,7 +396,7 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<div className="absolute bottom-16 sm:bottom-0 z-[1] w-full border-t bg-main-dark/10 backdrop-blur-sm border-brand/30">
+				<div className="absolute bottom-16 lg:bottom-0 z-[1] w-full border-t bg-main-dark/10 backdrop-blur-sm border-brand/30">
 					<div className="flex items-center justify-center w-full py-6">
 						<span className="text-sm font-medium text-center text-white ">
 							© Copyright 2022 by Sindev. All Right Reserved.

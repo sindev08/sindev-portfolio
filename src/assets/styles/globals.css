@@ -37,6 +37,7 @@ ul > li.is-current > a > .navmob {
 
 ul > li.is-current > a > span {
 	color: #4628f1 !important;
+	font-weight: 700 !important;
 }
 
 .navmob {
