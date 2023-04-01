@@ -86,10 +86,10 @@ export default function Home() {
 								</p>
 							</div>
 							<p className="text-sm lg:text-base text-white-1 sm:w-[75%]">
-								I’m a top online marketer and branding expert, I started my
-								career by lauching the popular metaverse design, in just a few
-								short years, I built the brand to millions of social media
-								followers and websites visitors.
+								Im skilled in PHP, Javascript, Typescript, UI/UX, and familiar
+								with tools and technologies such as Git, ReactJs, React Native,
+								NextJs, and Laravel. My goal is to help society through
+								innovative technology.
 							</p>
 							<div className="flex flex-row space-x-5">
 								<a href="https://id.linkedin.com/in/singgih-budi-purnadi-620751195?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F">
@@ -97,7 +97,10 @@ export default function Home() {
 										Hire Me!
 									</div>
 								</a>
-								<button className="flex justify-center px-5 py-2 space-x-3 border sm:w-48 rounded-xl border-brand hover:bg-brand/30">
+								<a
+									href="/cv/SinggihBudiPurnadi.pdf"
+									className="flex justify-center px-5 py-2 space-x-3 border sm:w-48 rounded-xl border-brand hover:bg-brand/30"
+								>
 									<span className="text-sm sm:text-base text-white-1">
 										Download CV
 									</span>
@@ -108,7 +111,7 @@ export default function Home() {
 											alt="icon download sindev"
 										/>
 									</div>
-								</button>
+								</a>
 							</div>
 						</div>
 						<div className="relative w-72 h-72 sm:w-96 sm:h-96">
@@ -130,13 +133,16 @@ export default function Home() {
 									About Me
 								</h2>
 								<p className="text-sm lg:text-base text-white-1">
-									I’m a top online marketer and branding expert, I started my
-									career by lauching the popular metaverse design, in just a few
-									short years, I built the brand to millions of social media
-									followers and websites visitors. I also created award-winning
-									online products with millions of dolloars in online sales you
-									want, you never get personalized experiences and they can be
-									upwards of $1000 on hour.
+									My name is Singgih, a frontend developer for websites and
+									mobile applications. I have successfully developed
+									blockchain-based websites and achieved sales targets during
+									ICO and private sales. I am proficient in programming
+									languages such as PHP, JavaScript, and TypeScript, and have a
+									good understanding of UI/UX. Additionally, I am familiar with
+									tools and technologies such as Git, ReactJs, React Native, and
+									Laravel. My goal is to use technology to help improve peoples
+									lives. Please feel free to contact me via the details listed
+									on my CV.
 								</p>
 							</div>
 							<div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
@@ -333,14 +339,14 @@ export default function Home() {
 											</div>
 											<div className="flex flex-col space-y-3 lg:space-y-5 lg:w-[45%]">
 												<h2 className="text-xl font-bold sm:text-2xl text-brand">
-													Bakery Landing Page Design
+													Litedex Protocol Design
 												</h2>
 												<p className="text-sm sm:text-base text-white-1">
-													When an unknown printer took a galley of type and
-													scrambled it to make a type specimen book. It has
-													survived not only five centuries, but also the leap
-													into electronic typesetting, remaining essentially
-													unchanged.
+													Lorem Ipsum is simply dummy text of the printing and
+													typesetting industry. Lorem Ipsum has been the
+													industrys standard dummy text ever since the 1500s,
+													when an unknown printer took a galley of type and
+													scrambled it to make a type specimen book.
 												</p>
 												<div className="flex flex-col">
 													<span className="text-xs sm:text-sm text-white-1">
