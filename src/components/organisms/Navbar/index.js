@@ -3,7 +3,6 @@ import { Logo } from "../../../assets";
 import Image from "next/image";
 import Link from "next/link";
 import Scrollspy from "react-scrollspy";
-import { useRef } from "react";
 import {
 	AboutSvg,
 	ContactSvg,
@@ -24,37 +23,45 @@ export const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	return (
 		<>
-			<nav className="fixed top-0 z-10 w-full border-b bg-main-dark/10 backdrop-blur-sm border-brand/30">
+			<nav className="fixed top-0 z-10 w-full border-b bg-main-dark/30 backdrop-blur-sm border-brand/30">
 				<div className="relative flex items-center justify-between w-full max-w-6xl px-4 py-2 mx-auto xl:px-0">
-					<a className="text-3xl font-bold font-heading" href="#">
+					<Link href="/">
 						<div className="relative h-10 w-28">
-							<Image src={Logo} layout="fill" alt="logo sindev white" />
+							<Image src={Logo} fill alt="logo sindev white" />
 						</div>
-					</a>
+					</Link>
 					{/* <!-- Nav Links --> */}
 					<Scrollspy
 						className="hidden px-4 space-x-16 text-white lg:flex"
-						items={["hero", "about", "project", "contact"]}
+						items={["hero", "about", "experience", "contact"]}
 						currentClassName="is-current"
 					>
 						<li>
 							<Link href="#hero">
-								<a className="relative text-sm hover:text-gray-200">Home</a>
+								<span className="relative text-sm hover:text-gray-200">
+									Home
+								</span>
 							</Link>
 						</li>
 						<li>
 							<Link href="#about">
-								<a className="relative text-sm hover:text-gray-200">About</a>
+								<span className="relative text-sm hover:text-gray-200">
+									About
+								</span>
 							</Link>
 						</li>
 						<li>
-							<Link href="#project">
-								<a className="relative text-sm hover:text-gray-200">Projects</a>
+							<Link href="#experience">
+								<span className="relative text-sm hover:text-gray-200">
+									Experience
+								</span>
 							</Link>
 						</li>
 						<li>
 							<Link href="#contact">
-								<a className="relative text-sm hover:text-gray-200">Contact</a>
+								<span className="relative text-sm hover:text-gray-200">
+									Contact
+								</span>
 							</Link>
 						</li>
 					</Scrollspy>
@@ -153,28 +160,28 @@ export const Navbar = () => {
 				>
 					<li>
 						<Link href="#hero">
-							<a className="flex flex-col items-center justify-center">
+							<div className="flex flex-col items-center justify-center">
 								<HomeSvg className="w-6 h-6 stroke-brand navmob" />
 								<span className="text-xs font-medium text-white-1">Home</span>
-							</a>
+							</div>
 						</Link>
 					</li>
 					<li>
 						<Link href="#about">
-							<a className="flex flex-col items-center justify-center">
+							<div className="flex flex-col items-center justify-center">
 								<AboutSvg className="w-6 h-6 stroke-brand navmob" />
 								<span className="text-xs font-medium text-white-1">About</span>
-							</a>
+							</div>
 						</Link>
 					</li>
 					<li>
 						<Link href="#project">
-							<a className="flex flex-col items-center justify-center">
+							<div className="flex flex-col items-center justify-center">
 								<ProjectSvg className="w-6 h-6 stroke-brand navmob" />
 								<span className="text-xs font-medium text-white-1">
 									Projects
 								</span>
-							</a>
+							</div>
 						</Link>
 					</li>
 					<>
@@ -195,70 +202,54 @@ export const Navbar = () => {
 							<div className="flex flex-col px-4 py-8 space-y-5">
 								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
 									<div className="relative w-10 h-10">
-										<Image src={GlassInstragram} layout="fill" alt="" />
+										<Image src={GlassInstragram} fill alt="" />
 									</div>
 									<Link href={Ahref.instragramLink}>
-										<a
-											target="_blank"
-											rel="noreferrer"
-											className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30"
-										>
+										<div className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30">
 											<span className="text-sm font-medium text-white-1">
 												Instragram
 											</span>
 											<LinkSvg className="w-6 h-6 fill-brand" />
-										</a>
+										</div>
 									</Link>
 								</div>
 								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
 									<div className="relative w-10 h-10">
-										<Image src={GlassEmail} layout="fill" alt="" />
+										<Image src={GlassEmail} fill alt="" />
 									</div>
 									<Link href={Ahref.emailLink}>
-										<a
-											target="_blank"
-											rel="noreferrer"
-											className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30"
-										>
+										<div className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30">
 											<span className="text-sm font-medium text-white-1">
 												Email
 											</span>
 											<LinkSvg className="w-6 h-6 fill-brand" />
-										</a>
+										</div>
 									</Link>
 								</div>
 								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
 									<div className="relative w-10 h-10">
-										<Image src={GlassLinkedIn} layout="fill" alt="" />
+										<Image src={GlassLinkedIn} fill alt="" />
 									</div>
 									<Link href={Ahref.linkedInLink}>
-										<a
-											target="_blank"
-											rel="noreferrer"
-											className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30"
-										>
+										<div className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30">
 											<span className="text-sm font-medium text-white-1">
 												LinkedIn
 											</span>
 											<LinkSvg className="w-6 h-6 fill-brand" />
-										</a>
+										</div>
 									</Link>
 								</div>
 								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
 									<div className="relative w-10 h-10">
-										<Image src={GlassGithub} layout="fill" alt="" />
+										<Image src={GlassGithub} fill alt="" />
 									</div>
 									<Link href={Ahref.githubLink}>
-										<a
-											target="_blank"
-											rel="noreferrer"
-											className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30"
-										>
+										<div className="flex justify-between w-10/12 px-8 py-2 sm:w-96 rounded-xl bg-brand/30">
 											<span className="text-sm font-medium text-white-1">
 												Githhub
 											</span>
 											<LinkSvg className="w-6 h-6 fill-brand" />
-										</a>
+										</div>
 									</Link>
 								</div>
 							</div>

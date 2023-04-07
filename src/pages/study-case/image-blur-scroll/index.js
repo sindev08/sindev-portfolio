@@ -9,12 +9,7 @@ export default function ImageBlurScroll() {
 			<div className=" h-80 w-80 bg-gray-600 overflow-hidden mb-5">
 				{props.image ? (
 					<div className="relative w-full h-full object-cover">
-						<Image
-							layout="fill"
-							placeholder="blur"
-							src={ImageExample}
-							alt="sindev"
-						/>
+						<Image fill placeholder="blur" src={ImageExample} alt="sindev" />
 					</div>
 				) : null}
 			</div>

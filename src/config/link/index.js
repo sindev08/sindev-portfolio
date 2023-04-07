@@ -4,3 +4,4 @@ export const githubLink = "https://github.com/sindev08";
 export const linkedInLink =
 	"https://id.linkedin.com/in/singgih-budi-purnadi-51797b24b/en";
 export const emailLink = "mailto:singgihbudipurnadi08@gmail.com";
+export const litedexLink = "https://litedex.io";

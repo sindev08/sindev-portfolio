@@ -1,0 +1,1 @@
+export { CompSocmed } from "./CompSocmed";

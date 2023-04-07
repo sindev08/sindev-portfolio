@@ -2,6 +2,7 @@
 
 // import Image from "next/image";
 import { Layout } from "components";
+import Link from "next/link";
 import { useState } from "react";
 
 // Step 2 tangkap ke parameter study case
@@ -21,26 +22,26 @@ export default function InfiniteScroll({ posts: initialPosts }) {
 	}
 	return (
 		<Layout>
-			<div className="flex flex-col space-y-10 justify-center items-center">
+			<div className="flex flex-col items-center justify-center space-y-10">
 				<span className="text-5xl font-bold text-brand">Case Study</span>
-				<div className="flex flex-col space-y-10 justify-center items-center">
+				<div className="flex flex-col items-center justify-center space-y-10">
 					<div className="flex flex-col space-y-12">
 						{posts.map((content, index) => (
 							<div
 								key={index}
-								className="max-w-md mx-auto bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl"
+								className="max-w-md mx-auto overflow-hidden bg-gray-900 shadow-md rounded-xl md:max-w-2xl"
 							>
 								<div className="md:flex">
 									<div className="p-4">
-										<div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+										<div className="text-sm font-semibold tracking-wide text-indigo-500 uppercase">
 											Case study
 										</div>
-										<a
+										<Link
 											href="#"
-											className="block mt-1 text-lg leading-tight font-medium text-gray-100 hover:underline"
+											className="block mt-1 text-lg font-medium leading-tight text-gray-100 hover:underline"
 										>
 											{content.title}
-										</a>
+										</Link>
 										<p className="mt-2 text-gray-300">{content.body}</p>
 									</div>
 								</div>

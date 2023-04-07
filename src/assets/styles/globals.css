@@ -16,11 +16,11 @@ html {
 /* li.is-current {
 	color: #4628f1;
 } */
-ul > li.is-current a::after {
+/* ul > li.is-current span::after {
 	width: 125%;
 }
 
-ul > li > a::after {
+ul > li > span::after {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -31,11 +31,11 @@ ul > li > a::after {
 	bottom: -0.25rem;
 }
 
-ul > li.is-current > a > .navmob {
+ul > li.is-current > span > .navmob {
 	fill: #4628f1;
 }
 
-ul > li.is-current > a > span {
+ul > li.is-current > span {
 	color: #4628f1 !important;
 	font-weight: 700 !important;
 }
@@ -43,7 +43,7 @@ ul > li.is-current > a > span {
 .navmob {
 	fill: #171045;
 	transition: 0.5s;
-}
+} */
 
 /* Custom React spring bottom sheet */
 :root {
