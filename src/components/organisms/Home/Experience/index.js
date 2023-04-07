@@ -42,7 +42,13 @@ export const ExperienceHome = () => {
 		},
 	];
 	return (
-		<section id="experience" className="max-w-2xl mx-auto mb-40 lg:mb-0">
+		<section
+			id="experience"
+			className="flex flex-col max-w-2xl px-4 pb-40 mx-auto space-y-1 xl:px-0 lg:pb-0 sm:space-y-2"
+		>
+			<h2 className="text-2xl font-bold text-left lg:text-center md:text-4xl text-brand">
+				Experience
+			</h2>
 			<ol className="relative border-l border-gray-500 dark:border-gray-700">
 				{data.map((item, i) => (
 					<ListExperience key={i} title={item.title} time={item.time}>

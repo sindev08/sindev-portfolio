@@ -24,10 +24,10 @@ import { NavLink, NavMobLink } from "components/molecules";
 export const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	const NavLinks = [
-		{ id: "hero", name: "Hero", offset: -500 },
-		{ id: "about", name: "About", offset: -500 },
-		{ id: "experience", name: "Experience", offset: -500 },
-		{ id: "contact", name: "Contact", offset: -500 },
+		{ id: "hero", name: "Hero", offset: -120 },
+		{ id: "about", name: "About", offset: -120 },
+		{ id: "experience", name: "Experience", offset: -120 },
+		{ id: "contact", name: "Contact", offset: -120 },
 	];
 	const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
 	return (
@@ -71,7 +71,7 @@ export const Navbar = () => {
 							className="flex flex-col items-center justify-center"
 							spy
 							smooth={true}
-							offset={-700}
+							offset={-280}
 							duration={100}
 						>
 							<HomeSvg className="w-6 h-6 stroke-brand navmob" />
@@ -85,7 +85,7 @@ export const Navbar = () => {
 							className="flex flex-col items-center justify-center"
 							spy
 							smooth={true}
-							offset={-700}
+							offset={-280}
 							duration={100}
 						>
 							<AboutSvg className="w-6 h-6 stroke-brand navmob" />
@@ -99,7 +99,7 @@ export const Navbar = () => {
 							className="flex flex-col items-center justify-center"
 							spy
 							smooth={true}
-							offset={-700}
+							offset={-280}
 							duration={100}
 						>
 							<ProjectSvg className="w-6 h-6 stroke-brand navmob" />
@@ -123,8 +123,8 @@ export const Navbar = () => {
 							// blocking={false}
 							snapPoints={({ minHeight }) => minHeight}
 						>
-							<div className="flex flex-col items-center px-4 py-8 space-y-5">
-								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
+							<div className="flex flex-col items-start px-4 py-8 space-y-5 sm:items-center">
+								<div className="flex flex-row items-center justify-between w-full sm:w-auto sm:justify-center sm:space-x-4">
 									<div className="relative flex-shrink-0 w-10 h-10">
 										<Image src={GlassInstragram} fill alt="" />
 									</div>
@@ -137,7 +137,7 @@ export const Navbar = () => {
 										</div>
 									</Link>
 								</div>
-								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
+								<div className="flex flex-row items-center justify-between w-full sm:w-auto sm:justify-center sm:space-x-4">
 									<div className="relative flex-shrink-0 w-10 h-10">
 										<Image src={GlassEmail} fill alt="" />
 									</div>
@@ -150,7 +150,7 @@ export const Navbar = () => {
 										</div>
 									</Link>
 								</div>
-								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
+								<div className="flex flex-row items-center justify-between w-full sm:w-auto sm:justify-center sm:space-x-4">
 									<div className="relative flex-shrink-0 w-10 h-10">
 										<Image src={GlassLinkedIn} fill alt="" />
 									</div>
@@ -163,7 +163,7 @@ export const Navbar = () => {
 										</div>
 									</Link>
 								</div>
-								<div className="flex flex-row items-center justify-between sm:justify-center sm:space-x-4">
+								<div className="flex flex-row items-center justify-between w-full sm:w-auto sm:justify-center sm:space-x-4">
 									<div className="relative flex-shrink-0 w-10 h-10">
 										<Image src={GlassGithub} fill alt="" />
 									</div>
