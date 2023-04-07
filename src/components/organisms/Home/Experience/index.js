@@ -1,31 +1,7 @@
-import { ArrowRightIcon } from "assets/icon/home";
-import { ImageWrap } from "components/atoms";
-import { Ahref } from "config";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export const ExperienceHome = () => {
-	const DescExperience = ({ desc }) => {
-		return (
-			<p className="text-sm font-normal text-gray-500 dark:text-gray-400">
-				{desc}
-			</p>
-		);
-	};
-	const ListExperience = ({ time, title, children }) => {
-		return (
-			<li className="mb-10 ml-4">
-				<div className="absolute w-3 h-3 bg-brand rounded-full -left-1.5 border border-brand "></div>
-				<time className="mb-1 text-sm text-gray-400 dark:text-gray-500">
-					{time}
-				</time>
-				<h3 className="mb-6 text-lg font-semibold text-brand">{title}</h3>
-				{children[0]}
-				{children[1]}
-			</li>
-		);
-	};
 	const data = [
 		{
 			time: "Juli 2021 - April 2023",
@@ -66,7 +42,7 @@ export const ExperienceHome = () => {
 		},
 	];
 	return (
-		<section id="experience" className="max-w-2xl mx-auto">
+		<section id="experience" className="max-w-2xl mx-auto mb-40 lg:mb-0">
 			<ol className="relative border-l border-gray-500 dark:border-gray-700">
 				{data.map((item, i) => (
 					<ListExperience key={i} title={item.title} time={item.time}>
@@ -85,5 +61,22 @@ export const ExperienceHome = () => {
 				))}
 			</ol>
 		</section>
+	);
+};
+
+const DescExperience = ({ desc }) => {
+	return <p className="text-sm font-normal text-gray-500">{desc}</p>;
+};
+const ListExperience = ({ time, title, children }) => {
+	return (
+		<li className="mb-10 ml-4">
+			<div className="absolute w-3 h-3 bg-brand rounded-full -left-1.5 border border-brand "></div>
+			<time className="mb-1 text-sm text-gray-400 dark:text-gray-500">
+				{time}
+			</time>
+			<h3 className="mb-6 text-lg font-semibold text-brand">{title}</h3>
+			{children[0]}
+			{children[1]}
+		</li>
 	);
 };

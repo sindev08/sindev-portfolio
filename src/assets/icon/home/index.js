@@ -11,3 +11,5 @@ export { default as GlassInstragram } from "./Instragram.png";
 export { default as GlassGithub } from "./Github.png";
 export { default as GlassEmail } from "./Email.png";
 export { default as ArrowRightIcon } from "./arrowRight.svg";
+
+export * as AnimationSvg from "./animationSvg";

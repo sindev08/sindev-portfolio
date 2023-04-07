@@ -12,15 +12,18 @@ html {
 	padding: 0;
 	font-family: "Montserrat", sans-serif;
 }
-
+/* .active {
+	font-weight: 700;
+	color: blue;
+} */
 /* li.is-current {
 	color: #4628f1;
 } */
-/* ul > li.is-current span::after {
+ul > li .active::after {
 	width: 125%;
 }
 
-ul > li > span::after {
+ul > li > a::after {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -31,11 +34,11 @@ ul > li > span::after {
 	bottom: -0.25rem;
 }
 
-ul > li.is-current > span > .navmob {
+.active > .navmob {
 	fill: #4628f1;
 }
 
-ul > li.is-current > span {
+ul > li > .active {
 	color: #4628f1 !important;
 	font-weight: 700 !important;
 }
@@ -43,7 +46,7 @@ ul > li.is-current > span {
 .navmob {
 	fill: #171045;
 	transition: 0.5s;
-} */
+}
 
 /* Custom React spring bottom sheet */
 :root {
