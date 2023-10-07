@@ -12,8 +12,8 @@ export const ButtonWhatapss = () => {
             alt="whatsapp singgih"
             className=" w-10 h-10"
           />
-          <div className="flex items-center -ml-6 justify-start px-3 pl-8 pr-2 rounded-r-xl bg-green-500">
-            <p className="text-sm font-medium">Chat</p>
+          <div className="flex items-center -ml-6 justify-start px-3 pl-8 pr-4 rounded-r-xl bg-green-500">
+            <p className="text-sm text-white font-medium">Chat</p>
           </div>
         </div>
       </div>
