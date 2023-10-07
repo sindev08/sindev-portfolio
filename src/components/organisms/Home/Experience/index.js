@@ -103,7 +103,9 @@ const ListExperience = ({ time, title, children }) => {
       <time className="mb-1 text-sm text-gray-400 dark:text-gray-500">
         {time}
       </time>
-      <h3 className="mb-6 text-lg font-semibold text-brand">{title}</h3>
+      <h3 className="mb-6 text-lg font-semibold font-plus-jakarta tracking-wide text-brand">
+        {title}
+      </h3>
       {children[0]}
       {children[1]}
     </li>

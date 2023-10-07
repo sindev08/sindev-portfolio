@@ -21,7 +21,7 @@ export const AboutHome = () => {
       <div className="flex flex-col items-center justify-center max-w-6xl px-4 py-20 mx-auto space-y-12 sm:space-y-24 sm:py-24 lg:space-y-0 lg:justify-between lg:flex-row-reverse xl:px-0">
         <div className="flex flex-col justify-center w-full space-y-8 sm:space-y-12 lg:h-full lg:w-6/12">
           <div className="flex flex-col space-y-1 sm:space-y-2">
-            <h2 className="text-2xl font-bold md:text-4xl text-brand">
+            <h2 className="text-2xl font-bold md:text-4xl text-brand font-plus-jakarta tracking-wide">
               About Me
             </h2>
             <p className="text-sm lg:text-base text-white-1">

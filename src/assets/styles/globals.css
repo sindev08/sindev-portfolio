@@ -5,12 +5,12 @@
 *,
 body,
 html {
-	/* scroll-padding-block: 40px; */
-	margin: 0;
-	/* box-sizing: border-box; */
-	scroll-behavior: smooth;
-	padding: 0;
-	font-family: "Montserrat", sans-serif;
+  /* scroll-padding-block: 40px; */
+  margin: 0;
+  /* box-sizing: border-box; */
+  scroll-behavior: smooth;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 /* .active {
 	font-weight: 700;
@@ -20,138 +20,138 @@ html {
 	color: #4628f1;
 } */
 ul > li .active::after {
-	width: 125%;
+  width: 125%;
 }
 
 ul > li > a::after {
-	position: absolute;
-	content: "";
-	left: 0;
-	width: 0;
-	height: 3px;
-	background: #4628f1;
-	transition: 0.3s;
-	bottom: -0.25rem;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #4628f1;
+  transition: 0.3s;
+  bottom: -0.25rem;
 }
 
 .active > .navmob {
-	fill: #4628f1;
+  fill: #4628f1;
 }
 
 ul > li > .active {
-	color: #4628f1 !important;
-	font-weight: 700 !important;
+  color: #4628f1 !important;
+  font-weight: 700 !important;
 }
 
 .navmob {
-	fill: #171045;
-	transition: 0.5s;
+  fill: #171045;
+  transition: 0.5s;
 }
 
 /* Custom React spring bottom sheet */
 :root {
-	--rsbs-handle-bg: #4b4b4b;
-	--rsbs-max-w: auto;
-	--rsbs-antigap-scale-y: 0;
-	/* --rsbs-backdrop-bg: rgba(0, 0, 0, 0); */
-	/* --rsbs-bg: rgba(7, 5, 20); */
-	--rsbs-bg: #171045;
-	--rsbs-backdrop-opacity: 1;
-	--rsbs-content-opacity: 1;
-	--rsbs-overlay-h: 0px;
-	--rsbs-overlay-rounded: 16px;
-	--rsbs-overlay-translate-y: 0px;
+  --rsbs-handle-bg: #4b4b4b;
+  --rsbs-max-w: auto;
+  --rsbs-antigap-scale-y: 0;
+  /* --rsbs-backdrop-bg: rgba(0, 0, 0, 0); */
+  /* --rsbs-bg: rgba(7, 5, 20); */
+  --rsbs-bg: #171045;
+  --rsbs-backdrop-opacity: 1;
+  --rsbs-content-opacity: 1;
+  --rsbs-overlay-h: 0px;
+  --rsbs-overlay-rounded: 16px;
+  --rsbs-overlay-translate-y: 0px;
 }
 
 [data-rsbs-overlay],
 [data-rsbs-backdrop],
 [data-rsbs-root]:after {
-	z-index: 20 !important;
-	-ms-scroll-chaining: none;
-	overscroll-behavior: none;
-	touch-action: none;
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
+  z-index: 20 !important;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+  touch-action: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 .mo-fire {
-	width: 28px;
-	height: auto;
-	/* position: absolute; */
-	/* left: 50%; */
-	/* margin-left: -100px; */
-	/* top: 100px; */
+  width: 28px;
+  height: auto;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* margin-left: -100px; */
+  /* top: 100px; */
 }
 .mo-fire svg {
-	width: 100%;
-	height: auto;
-	position: relative;
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 .flame {
-	animation-name: flamefly;
-	animation-duration: 2s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	opacity: 0;
-	transform-origin: 50% 50% 0;
+  animation-name: flamefly;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  transform-origin: 50% 50% 0;
 }
 .flame.one {
-	animation-delay: 1s;
-	animation-duration: 3s;
+  animation-delay: 1s;
+  animation-duration: 3s;
 }
 .flame3.two {
-	animation-duration: 5s;
-	animation-delay: 1s;
+  animation-duration: 5s;
+  animation-delay: 1s;
 }
 
 .flame-main {
-	animation-name: flameWobble;
-	animation-duration: 3s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+  animation-name: flameWobble;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .flame-main.one {
-	animation-duration: 4s;
-	animation-delay: 1s;
+  animation-duration: 4s;
+  animation-delay: 1s;
 }
 .flame-main.two {
-	animation-duration: 3s;
-	animation-delay: 2s;
+  animation-duration: 3s;
+  animation-delay: 2s;
 }
 .flame-main.three {
-	animation-duration: 2.1s;
-	animation-delay: 3s;
+  animation-duration: 2.1s;
+  animation-delay: 3s;
 }
 .flame-main.four {
-	animation-duration: 3.2s;
-	animation-delay: 4s;
+  animation-duration: 3.2s;
+  animation-delay: 4s;
 }
 .flame-main.five {
-	animation-duration: 2.5s;
-	animation-delay: 5s;
+  animation-duration: 2.5s;
+  animation-delay: 5s;
 }
 @keyframes flameWobble {
-	50% {
-		transform: scale(1, 1.2) translate(0, -30px) rotate(-2deg);
-	}
+  50% {
+    transform: scale(1, 1.2) translate(0, -30px) rotate(-2deg);
+  }
 }
 @keyframes flamefly {
-	0% {
-		transform: translate(0) rotate(180deg);
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		transform: translate(-20px, -100px) rotate(180deg);
-		opacity: 0;
-	}
+  0% {
+    transform: translate(0) rotate(180deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-20px, -100px) rotate(180deg);
+    opacity: 0;
+  }
 }
