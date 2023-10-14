@@ -1,9 +1,14 @@
 import { IconDownload, LineArt, ProfileHome } from "assets/icon/home";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import AOS from "aos";
+import React, { useEffect } from "react";
 
 export const HeroHome = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500, disable: "mobile" });
+    AOS.refresh();
+  }, []);
   return (
     <section
       id="hero"
@@ -12,7 +17,9 @@ export const HeroHome = () => {
         <Image fill src={LineArt} alt="line sindev" />
       </div>
       <div className="flex flex-col items-center justify-center h-full max-w-6xl px-4 mx-auto space-y-12 sm:space-y-24 xl:px-0 lg:space-y-0 lg:flex-row lg:justify-between">
-        <div className="flex flex-col justify-center w-full space-y-3 sm:space-y-5 lg:h-full lg:w-7/12">
+        <div
+          data-aos="fade-left"
+          className="flex flex-col justify-center w-full space-y-3 sm:space-y-5 lg:h-full lg:w-7/12">
           <div className="flex flex-col">
             <h1 className="text-base text-white-1 lg:text-xl">
               Hallo, I am Singgih
@@ -45,7 +52,9 @@ export const HeroHome = () => {
             </Link>
           </div>
         </div>
-        <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+        <div
+          data-aos="fade-right"
+          className="relative w-72 h-72 sm:w-96 sm:h-96">
           <Image fill src={ProfileHome} alt=" profile sindev" />
         </div>
       </div>

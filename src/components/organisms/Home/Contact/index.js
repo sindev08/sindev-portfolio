@@ -1,3 +1,4 @@
+import AOS from "aos";
 import {
   GlassEmail,
   GlassGithub,
@@ -6,14 +7,18 @@ import {
 } from "assets/icon/home";
 import { CompSocmed } from "components/molecules";
 import { Ahref } from "config";
-import React from "react";
+import React, { useEffect } from "react";
 
 export const ContactHome = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500, disable: "mobile" });
+    AOS.refresh();
+  }, []);
   return (
     <section
       id="contact"
       className="relative w-full hidden lg:flex lg:justify-center bg-gradient-to-b from-transparent to-[#171045]">
-      <div className="pt-20 pb-40 space-y-2 sm:space-y-8">
+      <div data-aos="fade-up" className="pt-20 pb-40 space-y-2 sm:space-y-8">
         <h2 className="text-2xl font-bold text-center md:text-4xl text-brand font-plus-jakarta tracking-wide">
           Contacts
         </h2>

@@ -1,5 +1,6 @@
+import AOS from "aos";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 export const ExperienceHome = () => {
   const data = [
@@ -97,8 +98,12 @@ const DescExperience = ({ desc }) => {
   return <p className="text-sm font-normal text-gray-500">{desc}</p>;
 };
 const ListExperience = ({ time, title, children }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1500, disable: "mobile" });
+    AOS.refresh();
+  }, []);
   return (
-    <li className="mb-10 ml-4">
+    <li className="mb-10 ml-4" data-aos="fade-up">
       <div className="absolute w-3 h-3 bg-brand rounded-full -left-1.5 border border-brand "></div>
       <time className="mb-1 text-sm text-gray-400 dark:text-gray-500">
         {time}

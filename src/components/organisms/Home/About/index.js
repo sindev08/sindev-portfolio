@@ -1,3 +1,4 @@
+import AOS from "aos";
 import {
   IconClock,
   IconDownload,
@@ -8,9 +9,13 @@ import {
 } from "assets/icon/home";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 export const AboutHome = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500, disable: "mobile" });
+    AOS.refresh();
+  }, []);
   return (
     <section
       id="about"
@@ -19,7 +24,9 @@ export const AboutHome = () => {
         <Image fill src={LineArt} alt="line sindev" />
       </div>
       <div className="flex flex-col items-center justify-center max-w-6xl px-4 py-20 mx-auto space-y-12 sm:space-y-24 sm:py-24 lg:space-y-0 lg:justify-between lg:flex-row-reverse xl:px-0">
-        <div className="flex flex-col justify-center w-full space-y-8 sm:space-y-12 lg:h-full lg:w-6/12">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col justify-center w-full space-y-8 sm:space-y-12 lg:h-full lg:w-6/12">
           <div className="flex flex-col space-y-1 sm:space-y-2">
             <h2 className="text-2xl font-bold md:text-4xl text-brand font-plus-jakarta tracking-wide">
               About Me
@@ -97,7 +104,9 @@ export const AboutHome = () => {
             </button>
           </div>
         </div>
-        <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+        <div
+          data-aos="fade-left"
+          className="relative w-72 h-72 sm:w-96 sm:h-96">
           <Image fill src={ProfileHome2} alt="profile sindev" />
         </div>
       </div>

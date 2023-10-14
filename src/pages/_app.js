@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { ButtonWhatapss } from "components/atoms/Buttons/ButtonWhatapps";
+import "aos/dist/aos.css";
 if (process.env.NODE_ENV !== "production") {
   require("../assets/styles/globals.css");
 } else {
