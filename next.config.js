@@ -1,7 +1,10 @@
 module.exports = {
 	reactStrictMode: true,
-	swcMinify: true,
 	images: {
-		domains: ["i.ibb.co", "images.pexels.com", "images.unsplash.com"], //your-external-link-hostname
+		remotePatterns: [
+			{ protocol: "https", hostname: "i.ibb.co" },
+			{ protocol: "https", hostname: "images.pexels.com" },
+			{ protocol: "https", hostname: "images.unsplash.com" },
+		],
 	},
 };
